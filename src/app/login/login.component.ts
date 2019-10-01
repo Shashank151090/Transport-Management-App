@@ -18,12 +18,16 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(){
+  login() {
     if(this.username == 'admin' && this.password == 'admin') {
       this.router.navigate(["dashboard"]);
     } else {
       console.log("Invalid Credentials");
     }
+  }
+
+  signup() {
+    this.router.navigate(["signup"]);
   }
 
 }

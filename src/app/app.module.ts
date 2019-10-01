@@ -7,9 +7,10 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatFormFieldModule,MatProgressSpinnerModule, MatInputModule,MatMenuModule,MatCardModule, MatGridListModule,MatIconModule, MatToolbarModule, MatButtonModule} from '@angular/material';
+import {MatFormFieldModule,MatExpansionModule,MatStepperModule, MatProgressSpinnerModule, MatInputModule,MatMenuModule,MatCardModule, MatGridListModule,MatIconModule, MatToolbarModule, MatButtonModule} from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    SignupComponent
   ],
   imports: [
     FormsModule,
@@ -26,6 +28,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatStepperModule,
+    MatExpansionModule,
     MatMenuModule,
     BrowserAnimationsModule,
     MatSliderModule,

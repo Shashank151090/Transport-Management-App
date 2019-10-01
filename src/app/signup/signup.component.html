@@ -1,0 +1,57 @@
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Personal Data</mat-panel-title>
+            <mat-panel-description>
+                
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <table>
+                <tr>
+                    <td>
+                        <mat-form-field>
+                            <input matInput placeholder="First Name" [(ngModel)]="fname" name="fname" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field>
+                            <input matInput placeholder="Email" type="email" [(ngModel)]="email" name="email" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field>
+                            <input matInput placeholder="Password" type="password" [(ngModel)]="password" name="password" required>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <input matInput placeholder="Confirm Password" type="password" [(ngModel)]="cnfrmpassword" name="cnfrmpassword" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>        
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Address</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-horizontal-stepper #stepper>
+            <mat-step>
+                <ng-template matStepLabel>Enter Address</ng-template>
+
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Enter Location</ng-template>
+    
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Enter City</ng-template>
+        
+            </mat-step>
+        </mat-horizontal-stepper>
+    </mat-expansion-panel>
+</mat-accordion>
