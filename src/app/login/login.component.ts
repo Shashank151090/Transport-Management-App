@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
 
   constructor(private router: Router) { }
-  username: string;
+  empId: string;
   password: string;
   showSpinner: boolean = false;
 
@@ -19,11 +19,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    if(this.username == 'admin' && this.password == 'admin') {
-      this.router.navigate(["dashboard"]);
-    } else {
-      console.log("Invalid Credentials");
-    }
+  localStorage.saveEmpId = JSON.stringify(this.empId);
+      this.router.navigate(["addNewRide"]);
   }
 
   signup() {

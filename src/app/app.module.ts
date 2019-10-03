@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatFormFieldModule,MatExpansionModule,MatStepperModule, MatProgressSpinnerModule, MatInputModule,MatMenuModule,MatCardModule, MatGridListModule,MatIconModule, MatToolbarModule, MatButtonModule} from '@angular/material';
+import {MatFormFieldModule,MatExpansionModule,MatSnackBarModule,MatTableModule,MatPaginatorModule,MatStepperModule,MatSelectModule, MatProgressSpinnerModule, MatInputModule,MatMenuModule,MatCardModule, MatGridListModule,MatIconModule, MatToolbarModule, MatButtonModule} from '@angular/material';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+import { AddRidesComponent } from './add-rides/add-rides.component';
+import { PickRideComponent } from './pick-ride/pick-ride.component';
 
 
 
@@ -20,13 +23,22 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     DashboardComponent,
     HeaderComponent,
-    SignupComponent
+    SignupComponent,
+    AddRidesComponent,
+    PickRideComponent
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
+    
+    NgxMaterialTimepickerModule,
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
+    MatSelectModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSnackBarModule,
     MatProgressSpinnerModule,
     MatStepperModule,
     MatExpansionModule,
